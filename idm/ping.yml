@@ -1,0 +1,7 @@
+---
+- name: Ping
+  hosts: ipaserver
+  become: true
+  tasks:
+  - ansible.builtin.ping:
+

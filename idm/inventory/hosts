@@ -1,0 +1,3 @@
+[ipaserver]
+idm1.fortytwo.itewk.xyz.local ansible_host=10.42.10.54
+
