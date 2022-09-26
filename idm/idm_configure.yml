@@ -1,8 +1,12 @@
 ---
-- name: Install and Configure IdM
+- name: Install IdM
   hosts: ipaserver
   become: true
-  roles:
-  - role: freeipa.ansible_freeipa.ipaserver
-    state: present
+  gather_facts: false
+  tasks:
+  - name: Create Host Records
+    freeipa.ansible_freeipa.ipadnsrecord:
+      ipaadmin_password: "{{ ipaadmin_password }}"
+      zone_name: "{{ ipaserver_domain }}"
+      records: "{{ dns_a_records }}"
 

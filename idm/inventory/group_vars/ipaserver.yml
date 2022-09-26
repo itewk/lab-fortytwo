@@ -17,3 +17,23 @@ ipadm_password: !vault |
           31376536303863383036386165326239386237303466663564643333616534316535383134323861
           6266386333623831620a376664373837663063393136613063643837376533613536386638373865
           37666265363763393532356438316237316366643561383230313831366434613261
+
+dns_a_records:
+- name: sno.dev
+  a_ip_address: 10.42.10.53
+- name: api.dev
+  a_ip_address: 10.42.10.53
+- name: api-int.dev
+  a_ip_address: 10.42.10.53
+- name: "*.apps.dev"
+  a_ip_address: 10.42.10.53
+
+- name: sno.prod
+  a_ip_address: 10.42.10.52
+- name: api.prod
+  a_ip_address: 10.42.10.52
+- name: api-int.prod
+  a_ip_address: 10.42.10.52
+- name: "*.apps.prod"
+  a_ip_address: 10.42.10.52
+

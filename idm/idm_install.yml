@@ -1,0 +1,8 @@
+---
+- name: Install IdM
+  hosts: ipaserver
+  become: true
+  roles:
+  - role: freeipa.ansible_freeipa.ipaserver
+    state: present
+
