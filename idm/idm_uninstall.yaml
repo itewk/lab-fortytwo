@@ -1,0 +1,8 @@
+---
+- name: Uninstall IdM
+  hosts: ipaserver
+  become: true
+  roles:
+  - role: freeipa.ansible_freeipa.ipaserver
+    state: absent
+

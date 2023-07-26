@@ -1,0 +1,15 @@
+---
+all:
+  hosts:
+  children:
+    ipaserver:
+      hosts:
+      children:
+        ipaserver-fortytwo:
+          hosts:
+            idm1.fortytwo.itewk.xyz.local:
+              ansible_host: 10.42.10.54
+        ipaserver-rh-itewk:
+          hosts:
+            idm.rh-itewk.internal.itewk.xyz:
+              ansible_host: 10.42.100.2
