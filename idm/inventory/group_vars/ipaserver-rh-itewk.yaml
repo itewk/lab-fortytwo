@@ -5,9 +5,6 @@ ipaserver_setup_dns: yes
 ipaserver_auto_forwarders: no
 ipaserver_setup_firewalld: yes
 ipaserver_no_forwarders: yes
-#ipaserver_forwarders:
-#- "1.1.1.1"
-#- "1.0.0.1"
 ipaadmin_password: !vault |
           $ANSIBLE_VAULT;1.1;AES256
           33386161313036316566663237373732323237616434663866333638306563613264653333303332
@@ -24,20 +21,11 @@ ipadm_password: !vault |
           37666265363763393532356438316237316366643561383230313831366434613261
 
 dns_a_records:
-#- name: sno.dev
-#  a_ip_address: 10.42.10.53
-#- name: api.dev
-#  a_ip_address: 10.42.10.53
-#- name: api-int.dev
-#  a_ip_address: 10.42.10.53
-#- name: "*.apps.dev"
-#  a_ip_address: 10.42.10.53
-
-#- name: sno.prod
-#  a_ip_address: 10.42.10.52
-#- name: api.prod
-#  a_ip_address: 10.42.10.52
-#- name: api-int.prod
-#  a_ip_address: 10.42.10.52
-#- name: "*.apps.prod"
-#  a_ip_address: 10.42.10.52
+- name: sno.dev
+  a_ip_address: 10.42.100.20
+- name: api.dev
+  a_ip_address: 10.42.100.20
+- name: api-int.dev
+  a_ip_address: 10.42.100.20
+- name: "*.apps.dev"
+  a_ip_address: 10.42.100.20
