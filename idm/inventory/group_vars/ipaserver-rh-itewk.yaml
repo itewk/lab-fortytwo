@@ -1,6 +1,6 @@
 ---
-ipaserver_domain: rh-itewk.internal.itewk.xyz
-ipaserver_realm: RH-ITEWK.INTERNAL.ITEWK.XYZ
+ipaserver_domain: rh-itewk.itewk.xyz
+ipaserver_realm: RH-ITEWK.ITEWK.XYZ
 ipaserver_setup_dns: yes
 ipaserver_auto_forwarders: no
 ipaserver_setup_firewalld: yes
@@ -21,11 +21,11 @@ ipadm_password: !vault |
           37666265363763393532356438316237316366643561383230313831366434613261
 
 dns_a_records:
-- name: sno.dev
-  a_ip_address: 10.42.100.20
+- name: dev
+  a_ip_address: 10.42.100.10
 - name: api.dev
-  a_ip_address: 10.42.100.20
+  a_ip_address: 10.42.100.10
 - name: api-int.dev
-  a_ip_address: 10.42.100.20
+  a_ip_address: 10.42.100.10
 - name: "*.apps.dev"
-  a_ip_address: 10.42.100.20
+  a_ip_address: 10.42.100.10
